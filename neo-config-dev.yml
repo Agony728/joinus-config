@@ -4,6 +4,18 @@ spring:
     url: jdbc:mysql://localhost:3306/shopping?useSSL=false
     username: dy
     password: 123456
+  mail:
+    host: smtp.qq.com
+    username: 982908910@qq.com
+    password: mdbpnmpygtvbbdhe
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    default-encoding: UTF-8
   redis:
     database: 0
     host: 127.0.0.1
