@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shopping?useSSL=false
+    username: dy
+    password: 123456
+  redis:
+    database: 0
+    host: 127.0.0.1
+
+feign:
+  hystrix:
+    enabled: true
+ribbon:
+  ReadTimeout: 3000
+  ConnetTimeout: 3000
+hystrix:
+  command:
+    default:  #default全局有效，service id指定应用有效
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+mybatis:
+  mapper-locations: mapper/*Mapper.xml
+  type-aliases-package: com.dy.pojo.vo
