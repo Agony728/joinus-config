@@ -38,3 +38,16 @@ hystrix:
 mybatis:
   mapper-locations: mapper/*Mapper.xml
   type-aliases-package: com.dy.pojo.vo
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info
+  endpoint:
+    health:
+      show-details: ALWAYS
+springcloud-es:
+ elasticsearch:
+  hostlist: ${eshostlist:127.0.0.1:9200} #多个结点中间用逗号分隔
+es:
+ index: join
